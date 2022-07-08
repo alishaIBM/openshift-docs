@@ -64,7 +64,9 @@ Replace `bootstrap.ign` with `master.ign` or `worker.ign` in the command to vali
 +
 . Although it is possible to obtain the {op-system} images that are required for your preferred method of installing operating system instances from the
 ifdef::openshift-enterprise[]
+ifndef::ibm-power[]
 link:https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/[{op-system} image mirror]
+endif::ibm-power[]
 endif::openshift-enterprise[]
 ifdef::openshift-origin[]
 link:https://getfedora.org/en/coreos/download?tab=metal_virtualized&stream=stable[{op-system}]
@@ -83,10 +85,10 @@ $ openshift-install coreos print-stream-json | grep '\.iso[^.]'
 [source,terminal]
 ifndef::openshift-origin[]
 ----
-"location": "<url>/art/storage/releases/rhcos-4.10-aarch64/<release>/aarch64/rhcos-<release>-live.aarch64.iso",
-"location": "<url>/art/storage/releases/rhcos-4.10-ppc64le/<release>/ppc64le/rhcos-<release>-live.ppc64le.iso",
-"location": "<url>/art/storage/releases/rhcos-4.10-s390x/<release>/s390x/rhcos-<release>-live.s390x.iso",
-"location": "<url>/art/storage/releases/rhcos-4.10/<release>/x86_64/rhcos-<release>-live.x86_64.iso",
+"location": "<url>/art/storage/releases/rhcos-4.11-aarch64/<release>/aarch64/rhcos-<release>-live.aarch64.iso",
+"location": "<url>/art/storage/releases/rhcos-4.11-ppc64le/<release>/ppc64le/rhcos-<release>-live.ppc64le.iso",
+"location": "<url>/art/storage/releases/rhcos-4.11-s390x/<release>/s390x/rhcos-<release>-live.s390x.iso",
+"location": "<url>/art/storage/releases/rhcos-4.11/<release>/x86_64/rhcos-<release>-live.x86_64.iso",
 ----
 endif::openshift-origin[]
 ifdef::openshift-origin[]
